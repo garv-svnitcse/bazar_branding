@@ -60,7 +60,7 @@
   .bb-section-dark .bb-lede{color:#D9D2BE;}
 
   /* reveal */
-  .bb-reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .bb-reveal{opacity:1; transform:translateY(0); transition:opacity .6s ease, transform .6s ease;}
   .bb-reveal.bb-in{opacity:1; transform:translateY(0);}
 
   /* NAV */
@@ -704,11 +704,9 @@
   renderPlans();
 
   /* ---------- API CONFIG & STORAGE HELPERS ---------- */
-  const API_BASE = (typeof import.meta !== "undefined" && import.meta.env && import.meta.env.VITE_API_URL)
-    ? import.meta.env.VITE_API_URL
-    : ((window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
-        ? "http://localhost:4000"
-        : "https://bazaar-branding-backend.onrender.com");
+  const API_BASE = window.VITE_API_URL || ((window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+    ? "http://localhost:4000"
+    : "https://bazaar-branding-backend.onrender.com");
 
   async function storageGet(key, shared){
     try{ return await window.storage.get(key, shared); }
