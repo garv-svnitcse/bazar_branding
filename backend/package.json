@@ -1,0 +1,20 @@
+{
+  "name": "bazaar-branding-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the Bazaar Branding café growth landing page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "lowdb": "^7.0.1",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.3.7"
+  }
+}

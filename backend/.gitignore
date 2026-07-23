@@ -1,0 +1,13 @@
+# Backend dependencies
+node_modules/
+
+# Environment files
+.env
+.env.local
+
+# Lowdb database storage files
+data/*.json
+!data/.gitkeep
+
+# Logs
+*.log
